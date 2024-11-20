@@ -1,0 +1,324 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1, h2, h3, h4 {
+  color: #333;
+}
+
+/* Sticky Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999; /* Ensure the navbar stays on top of other content */
+  background-color: #333;
+}
+
+/* About Section Styling */
+#about {
+  background-color: #f8f9fa; /* Light background for the about section */
+  padding-top: 50px; /* Adds space at the top of the section */
+  padding-bottom: 50px; /* Adds space at the bottom of the section */
+}
+
+#about .row {
+  display: flex;
+  justify-content: center; /* Center the row items horizontally */
+  align-items: center; /* Vertically align the content */
+}
+
+#about .col-md-6 {
+  display: flex;
+  justify-content: center; /* Centers both the image and the content */
+  align-items: center; /* Vertically align the content */
+}
+
+#about img {
+  max-width: 70%; /* Restrict the image size to 70% of the container */
+  height: auto; /* Maintain aspect ratio of the image */
+  margin-bottom: 20px; /* Add some space below the image */
+}
+
+#about .about-box {
+  max-width: 100%; /* Ensure the about box doesn't extend beyond its container */
+  padding: 20px; /* Add padding inside the content box */
+  background-color: white; /* White background for the content box */
+  border-radius: 10px; /* Round the corners of the content box */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for a modern look */
+}
+
+#about h2 {
+  font-size: 2rem; /* Make the heading bigger */
+  color: #333; /* Dark text color */
+  margin-bottom: 20px; /* Space between heading and paragraph */
+}
+
+#about p {
+  font-size: 1.1rem; /* Standard font size for the paragraph */
+  color: #555; /* Lighter color for the paragraph text */
+}
+
+@media (max-width: 768px) {
+  /* Adjust the layout for mobile devices */
+  #about .row {
+    flex-direction: column; /* Stack the image and content vertically on smaller screens */
+  }
+
+  #about img {
+    max-width: 90%; /* Increase the image size for smaller screens */
+    margin-bottom: 20px; /* Add space below the image */
+  }
+
+  #about .about-box {
+    width: 90%; /* Increase the content box size on mobile */
+  }
+}
+
+
+/* Skills Section Styling */
+#skills {
+  background-color: #f9f9f9; /* Light background color for the section */
+  padding: 60px 0; /* Top and bottom padding */
+}
+
+#skills h1 {
+  font-size: 36px; /* Large heading */
+  color: #333; /* Dark text for heading */
+  margin-bottom: 30px; /* Space below heading */
+}
+
+label {
+  font-size: 20px; /* Medium font size for skill name */
+  color: #555; /* Medium gray color for the skill name */
+  font-weight: 600; /* Bold text */
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+/* Progress bar styling */
+.progress {
+  background-color: #f3f3f3; /* Light gray background for the progress bar */
+  border-radius: 10px; /* Rounded corners */
+  height: 20px; /* Height of the progress bar */
+  margin-bottom: 20px; /* Space between progress bars */
+}
+
+.progress-bar {
+  height: 100%; /* Full height of the progress bar */
+  background-color: #4caf50; /* Green color for the progress */
+  border-radius: 10px; /* Rounded corners for the progress bar */
+  transition: width 0.3s ease; /* Smooth transition for the progress bar */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  #skills h1 {
+    font-size: 28px; /* Smaller heading for mobile devices */
+  }
+
+  .progress {
+    height: 15px; /* Adjust height for smaller screens */
+  }
+  
+  label {
+    font-size: 18px; /* Slightly smaller font for the label */
+  }
+}
+
+
+/* General Carousel Styling */
+#projects {
+  padding: 60px 0;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Carousel Indicators (Dots) */
+.carousel-indicators {
+  bottom: -40px; /* Adjust the position of the dots */
+}
+
+.carousel-indicators button {
+  background-color: #555; /* Default color of dots */
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+
+.carousel-indicators .active {
+  background-color: #007bff; /* Active dot color */
+}
+
+/* Carousel Controls (Next/Prev Buttons) */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #007bff; /* Color of the arrows */
+}
+
+.carousel-control-prev-icon {
+  border-radius: 50%;
+}
+
+.carousel-control-next-icon {
+  border-radius: 50%;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    font-size: 16px;
+  }
+}
+/* Achievements Section Styles */
+#achievements {
+  background-color: #f8f9fa;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#achievements h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-img-top {
+  border-radius: 10px;
+  object-fit: cover;
+  height: 200px; /* Adjust image height */
+  width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 15px;
+}
+
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 150px; /* Adjust image height for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  #achievements h2 {
+    font-size: 2rem;
+  }
+}/* Contact Section Styles */
+#contact {
+  background-color: #f8f9fa; /* Light background color for the section */
+  padding-top: 50px; /* Adds space at the top of the section */
+  padding-bottom: 50px; /* Adds space at the bottom of the section */
+}
+
+#contact h2 {
+  font-size: 2.5rem; /* Larger font size for the heading */
+  font-weight: bold; /* Makes the heading bold */
+  margin-bottom: 30px; /* Adds space below the heading */
+  color: #333; /* Dark color for the text */
+}
+
+#contact h5 {
+  font-size: 1.25rem; /* Medium font size for the subheading */
+  font-weight: bold; /* Makes the subheading bold */
+  margin-bottom: 20px; /* Adds space below the subheading */
+  color: #333; /* Dark color for the text */
+}
+
+#contact iframe {
+  width: 100%; /* Makes the iframe take the full width of its container */
+  height: 450px; /* Fixed height for the map */
+  border: 0; /* Removes the default border of the iframe */
+  border-radius: 10px; /* Adds rounded corners to the map */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the iframe */
+  margin-bottom: 30px; /* Adds space below the iframe */
+}
+
+#contact form {
+  background-color: #fff; /* White background for the form */
+  padding: 20px; /* Adds padding inside the form */
+  border-radius: 10px; /* Rounds the corners of the form */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the form */
+}
+
+#contact .form-label {
+  font-size: 1rem; /* Standard font size for labels */
+  color: #555; /* Slightly lighter color for the label text */
+}
+
+#contact .form-control {
+  font-size: 1rem; /* Font size for input and textarea fields */
+  border-radius: 5px; /* Rounds the corners of input and textarea fields */
+  padding: 12px; /* Adds padding inside input and textarea fields */
+  margin-bottom: 15px; /* Adds space between the fields */
+  border: 1px solid #ccc; /* Adds a border to input and textarea fields */
+}
+
+#contact .form-control:focus {
+  border-color: #007bff; /* Changes the border color when the input or textarea is focused */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Adds a subtle focus shadow */
+}
+
+#contact .btn {
+  background-color: #007bff; /* Blue color for the submit button */
+  color: white; /* White text color for the button */
+  padding: 10px 20px; /* Adds padding to the button */
+  border-radius: 5px; /* Rounds the corners of the button */
+  font-size: 1.1rem; /* Slightly larger font size for the button */
+  border: none; /* Removes the border from the button */
+  transition: background-color 0.3s ease; /* Smooth transition for the background color */
+}
+
+#contact .btn:hover {
+  background-color: #0056b3; /* Darker blue color when the button is hovered */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+  #contact .row {
+    flex-direction: column; /* Stacks the columns vertically on smaller screens */
+  }
+
+  #contact iframe {
+    height: 300px; /* Reduces the height of the map on smaller screens */
+  }
+}
+
